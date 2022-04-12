@@ -1,15 +1,15 @@
 import { chromium, firefox, webkit, devices } from 'playwright';
 
-const iPhone = devices['iPhone 6'];
+const iPad = devices['iPad Pro 11 landscape'];
 
 module.exports = {
-    browserType: webkit,
-    launchConfig: {
-        headless: false,
-        slowMo: 300
-    },
-    contextConfig: {
-        viewport: iPhone.viewport,
-        userAgent: iPhone.userAgent
-    }
+  browserType: chromium,
+  launchConfig: {
+    headless: false,
+    slowMo: 300,
+  },
+  contextConfig: {
+    viewport: iPad.viewport,
+    userAgent: iPad.userAgent,
+  },
 };
